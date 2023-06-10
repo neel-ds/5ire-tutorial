@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useState } from "react";
 import { useRouter } from "next/router";
@@ -11,15 +10,15 @@ const Header = () => {
   const { pathname } = useRouter();
   return (
     <>
-      <nav className="fixed z-10 w-full mx-auto bg-white/40 bg-opacity-80 px-2 sm:px-4 py -2.5 rounded">
+      <nav className="fixed z-10 w-full mx-auto bg-white/40 bg-opacity-80 px-2 sm:px-4 py -2.5 pt-4 rounded">
         <div className="max-w-[1080px] container flex flex-wrap justify-between items-center mx-auto">
           <Link href="/" className="flex items-center flex-1">
             <div className="flex flex-row items-center self-center text-xl font-bold whitespace-nowrap text-[#732fff] hover:text-[#932fff]">
-              <div className="hidden sm:block">mintfolio</div>
+              <div className="hidden sm:block">5ire Tutorial</div>
             </div>
           </Link>
           <div className="flex md:order-2" style={{ marginLeft: "2rem" }}>
-          <ConnectButton />
+            <ConnectButton />
             <button
               data-collapse-toggle="mobile-menu-4"
               type="button"
@@ -50,26 +49,24 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/mintNFT"
+                  href="/Explore"
                   className={`${
-                    pathname === "/mintNFT" ? "text-[#a137df]" : "text-gray-700"
+                    pathname === "/explore" ? "text-[#a137df]" : "text-gray-700"
                   } block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#9504ff] md:p-0`}
                   aria-current="page"
                 >
-                  <b>Mint NFT</b>
+                  <b>Explore</b>
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/collection"
+                  href="/about"
                   className={`${
-                    pathname === "/collection"
-                      ? "text-[#a137df]"
-                      : "text-gray-700"
+                    pathname === "/about" ? "text-[#a137df]" : "text-gray-700"
                   } block py-2 pr-4 pl-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-[#9504ff] md:p-0`}
                   aria-current="page"
                 >
-                  <b>NFT Collection</b>
+                  <b>About</b>
                 </Link>
               </li>
             </ul>

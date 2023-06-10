@@ -56,8 +56,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="px-4 md:px-0 my-14 mx-auto max-w-[1080px]">
-        <h1>Mint your NFT</h1>
+      <main className="px-4 md:px-0 my-14 mx-auto max-w-[1080px]">        
         <NFTCard
           image={IMAGE}
           tag="Exclusive"
